@@ -10,7 +10,7 @@ internal class Program
 
         BaggageCalculator baggageCalculator = new();
         DateTime travelTime = DateTime.Now;
-        decimal price = baggageCalculator.CalculatePrice(numChecked, numCarryOn, numPassengers, travelTime);
+        decimal price = baggageCalculator.CalculatePrice(numChecked, numCarryOn, numPassengers, travelTime.Month >= 11 || travelTime.Month <= 2);
 
         Console.WriteLine($"{numChecked} checked and {numCarryOn} carry-on bags for {numPassengers} passengers is {price:C}");
     }
