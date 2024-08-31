@@ -1,6 +1,7 @@
 namespace Packt.CloudySkiesAir.Chapter3;
 
-public class Passenger {
+public class Passenger 
+{
   public string FirstName { get; set; }
   public string LastName { get; set; }
   public int BoardingGroup { get; set; }

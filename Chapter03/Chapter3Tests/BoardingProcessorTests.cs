@@ -2,8 +2,8 @@ using Packt.CloudySkiesAir.Chapter3;
 
 namespace Packt.CloudySkiesAir.Chapter3.Tests;
 
-public class BoardingProcessorTests {
-
+public class BoardingProcessorTests 
+{
     [Theory]
     [InlineData(false, 4, false, 4, "Board Now")]
     [InlineData(false, 3, false, 2, "Please Wait")]
@@ -19,15 +19,18 @@ public class BoardingProcessorTests {
         int passengerGroup,
         bool needsHelp,
         int currentGroup,
-        string expectedResult) {
+        string expectedResult) 
+    {
 
         // Arrange
-        BoardingProcessor bp = new() {
+        BoardingProcessor bp = new() 
+        {
             Status = BoardingStatus.Boarding,
             CurrentBoardingGroup = currentGroup,
         };
 
-        Passenger passenger = new() {
+        Passenger passenger = new() 
+        {
             FirstName = "Test",
             LastName = "Passenger",
             IsMilitary = isMilitary,
