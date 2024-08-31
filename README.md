@@ -28,3 +28,8 @@ Software projects start as brand-new greenfield projects, but invariably become 
 
  📚 Chapter 3: Refactoring Code Flow and Iteration
 
+    - Controlling program flow
+    - Instantiating objects
+    - Iterating over collections
+    - Refactoring LINQ statements
+    - Reviewing and testing our refactored code
