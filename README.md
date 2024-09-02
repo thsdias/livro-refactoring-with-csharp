@@ -33,3 +33,5 @@ Software projects start as brand-new greenfield projects, but invariably become 
     - Iterating over collections
     - Refactoring LINQ statements
     - Reviewing and testing our refactored code
+
+ 📚 Chapter 4: Refactoring at the Method Level
