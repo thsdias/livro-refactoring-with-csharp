@@ -2,7 +2,8 @@
 
 internal class Program
 {
-    public static void Main() {
+    public static void Main() 
+    {
         FlightTracker flightTracker = new();
 
         Random rand = new();
@@ -11,7 +12,9 @@ internal class Program
         int nextId = 2024;
 
         DateTime nextFlightTime = DateTime.Now;
-        for (int i = 0; i < 15; i++) {
+
+        for (int i = 0; i < 15; i++) 
+        {
             nextFlightTime = nextFlightTime.AddMinutes(rand.Next(1, 25));
 
             AddRandomFlight(flightTracker, rand, destinations, gates, nextId, nextFlightTime);
@@ -22,13 +25,15 @@ internal class Program
         Console.WriteLine();
         Console.WriteLine("FLIGHT    DEST  DEPARTURE             GATE  STATUS");
         Console.WriteLine();
+
         flightTracker.DisplayFlights();
     }
 
-    private static void AddRandomFlight(FlightTracker flightTracker, Random rand, string[] destinations, string[] gates, int nextId, DateTime nextFlightTime) {
+    private static void AddRandomFlight(FlightTracker flightTracker, Random rand, string[] destinations, string[] gates, int nextId, DateTime nextFlightTime) 
+    {
         string dest = destinations[rand.Next(destinations.Length)];
         string gate = gates[rand.Next(gates.Length)];
-        Flight flight = flightTracker.ScheduleNewFlight($"CSA{nextId}", dest, nextFlightTime, gate);
+        Flight flight = flightTracker.ScheduleNewFlight($"CSA{nextId}", dest, nextFlightTime);
 
         _ = rand.Next(8) switch {
             0 => flight.Status = FlightStatus.Inbound,

@@ -1,6 +1,7 @@
 ﻿namespace Packt.CloudySkiesAir.Chapter4; 
 
-public enum FlightStatus {
+public enum FlightStatus 
+{
     Inbound,
     OnTime,
     Delayed,
