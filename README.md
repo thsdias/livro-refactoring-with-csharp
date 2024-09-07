@@ -35,3 +35,10 @@ Software projects start as brand-new greenfield projects, but invariably become 
     - Reviewing and testing our refactored code
 
  📚 Chapter 4: Refactoring at the Method Level
+
+    - Refactoring the flight tracker
+    - Refactoring methods
+    - Refactoring constructors
+    - Refactoring parameters
+    - Refactoring to functions
+    - Introducing static methods and extension methods
