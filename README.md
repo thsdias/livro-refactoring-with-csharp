@@ -44,3 +44,10 @@ Software projects start as brand-new greenfield projects, but invariably become 
     - Introducing static methods and extension methods
 
  📚 Chapter 5: Object-Oriented Refactoring
+
+    - Organizing classes via refactoring
+    - Refactoring and inheritance
+    - Controlling inheritance with abstract
+    - Refactoring for better encapsulation
+    - Improving classes with interfaces and polymorphism
+    
