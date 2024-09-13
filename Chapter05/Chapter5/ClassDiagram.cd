@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Packt.CloudySkiesAir.Chapter5.FlightScheduler">
-    <Position X="0.75" Y="0.5" Width="2.5" />
+    <Position X="0.5" Y="7.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAACAAAAAACAAAAAAAAAAAAAAAAAAAAAgACQ=</HashCode>
       <FileName>FlightScheduler.cs</FileName>
@@ -10,42 +10,66 @@
       <Field Name="_flights" />
     </ShowAsCollectionAssociation>
   </Class>
+  <Class Name="Packt.CloudySkiesAir.Chapter5.Airport" Collapsed="true">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEgAAgAAQAAAIAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Airport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="Packt.CloudySkiesAir.Chapter5.PassengerFlightInfo" BaseTypeListCollapsed="true">
-    <Position X="5.75" Y="3" Width="1.75" />
+    <Position X="8" Y="3.5" Width="1.75" />
     <Members>
       <Field Name="_passengers" Hidden="true" />
     </Members>
     <TypeIdentifier>
-      <HashCode>AABCgACAAgACAAIEQAAAEAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
-      <FileName>IFlightInfo.cs</FileName>
+      <HashCode>AABAgACAAgQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PassengerFlightInfo.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Packt.CloudySkiesAir.Chapter5.FreightFlightInfo" BaseTypeListCollapsed="true">
-    <Position X="3" Y="3" Width="1.75" />
+    <Position X="3.25" Y="3.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AABCEAAAAAACAAIEQAAAEAAAAAAAAAABAQAAAAAAAAA=</HashCode>
-      <FileName>IFlightInfo.cs</FileName>
+      <HashCode>AABAEAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>FreightFlightInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Packt.CloudySkiesAir.Chapter5.FlightInfoBase">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABCBAAAAAACAAAEAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FlightInfoBase.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Packt.CloudySkiesAir.Chapter5.AirTravel.Airport">
-    <Position X="7.5" Y="0.5" Width="1.5" />
+  <Class Name="Packt.CloudySkiesAir.Chapter5.AirportEvent" Collapsed="true">
+    <Position X="12.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAIAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>AirportInfo.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>AirportEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Packt.CloudySkiesAir.Chapter5.CargoItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAAAAgAAAAgA=</HashCode>
+      <FileName>CargoItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Packt.CloudySkiesAir.Chapter5.CharterFlightInfo">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>CharterFlightInfo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="Packt.CloudySkiesAir.Chapter5.IFlightInfo">
-    <Position X="4.5" Y="0.5" Width="1.5" />
+    <Position X="4" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAACAAIAQAAAEAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <HashCode>AAACBAAAAAACAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IFlightInfo.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="ArrivalLocation" />
-      <Property Name="DepartureLocation" />
-    </ShowAsAssociation>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

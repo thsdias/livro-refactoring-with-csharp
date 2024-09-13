@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Packt.CloudySkiesAir.Chapter5.AirTravel;
 using Xunit;
 
 namespace Packt.CloudySkiesAir.Chapter5.Tests
@@ -21,12 +20,12 @@ namespace Packt.CloudySkiesAir.Chapter5.Tests
                 Country = "United States",
                 Name = "Dotnet Airport"
             };
+
             _airport2 = new Airport() {
                 Code = "CSI",
                 Country = "United Kingdom",
                 Name = "C# International Airport"
             };
-
         }
 
         [Fact]
@@ -60,9 +59,9 @@ namespace Packt.CloudySkiesAir.Chapter5.Tests
             Assert.Equal("CS2005", result.First().Id);
         }
 
-
         [Fact]
-        public void SearchShouldNotReturnHiddenFlights() {
+        public void SearchShouldNotReturnHiddenFlights()
+        {
             // Arrange
             DateTime departTime = DateTime.Today.AddHours(6.5);
             _flightScheduler.ScheduleFlight("CS2005", _airport2, _airport1, departTime, departTime.AddHours(14.5), 100);
@@ -73,6 +72,5 @@ namespace Packt.CloudySkiesAir.Chapter5.Tests
             // Assert
             Assert.Empty(result);
         }
-
     }
 }
