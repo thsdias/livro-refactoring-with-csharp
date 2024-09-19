@@ -52,4 +52,10 @@ Software projects start as brand-new greenfield projects, but invariably become 
     - Improving classes with interfaces and polymorphism
 
  📚 Chapter 6: Unit Testing
+
+    - Understanding testing and unit tests
+    - Testing code with xUnit
+    - Refactoring unit tests
+    - Exploring other testing frameworks
+    - Adopting a testing mindset
     

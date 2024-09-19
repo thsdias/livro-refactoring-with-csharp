@@ -2,55 +2,68 @@
 
 namespace Packt.CloudySkiesAir.Chapter6.Flight.Scheduling;
 
-public class FlightScheduler {
+public class FlightScheduler 
+{
   private readonly List<IFlightInfo> _flights = new();
 
-  public void ScheduleFlight(IFlightInfo flight) {
+  public void ScheduleFlight(IFlightInfo flight) 
+  {
     _flights.Add(flight);
 
     Console.WriteLine($"Scheduled Flight {flight}");
   }
 
-  public void RemoveFlight(IFlightInfo flight) {
+  public void RemoveFlight(IFlightInfo flight) 
+  {
     _flights.Remove(flight);
   }
 
-  public IEnumerable<IFlightInfo> GetAllFlights() {
+  public IEnumerable<IFlightInfo> GetAllFlights() 
+  {
     return _flights.AsReadOnly();
   }
 
-  public IEnumerable<IFlightInfo> Search(FlightSearch s) {
+  public IEnumerable<IFlightInfo> Search(FlightSearch s) 
+  {
     IEnumerable<IFlightInfo> results = _flights;
 
-    if (s.Depart != null) {
+    if (s.Depart != null) 
+    {
       results = results.Where(f => f.Departure.Location == s.Depart);
     }
 
-    if (s.Arrive != null) {
+    if (s.Arrive != null) 
+    {
       results = results.Where(f => f.Arrival.Location == s.Arrive);
     }
 
-    if (s.MinDepart != null) {
+    if (s.MinDepart != null) 
+    {
       results = results.Where(f => f.Departure.Time >= s.MinDepart);
     }
 
-    if (s.MaxDepart != null) {
+    if (s.MaxDepart != null) 
+    {
       results = results.Where(f => f.Departure.Time <= s.MaxDepart);
     }
 
-    if (s.MinArrive != null) {
+    if (s.MinArrive != null) 
+    {
       results = results.Where(f => f.Arrival.Time >= s.MinArrive);
     }
 
-    if (s.MaxArrive != null) {
+    if (s.MaxArrive != null) 
+    {
       results = results.Where(f => f.Arrival.Time <= s.MaxArrive);
     }
 
-    if (s.MinLength != null) {
+    if (s.MinLength != null) 
+    {
       results = results.Where(f => f.Duration >= s.MinLength);
     }
 
-    if (s.MaxLength != null) {
+    if (s.MaxLength != null) 
+    {
       results = results.Where(f => f.Duration <= s.MaxLength);
     }
 
@@ -58,6 +71,7 @@ public class FlightScheduler {
   }
 
   public List<IFlightInfo> Search(List<FlightFilterBase> rules) =>
-      _flights.Where(f => rules.All(r => r.ShouldInclude(f)))
-              .ToList();
+      _flights
+        .Where(f => rules.All(r => r.ShouldInclude(f)))
+        .ToList();
 }
