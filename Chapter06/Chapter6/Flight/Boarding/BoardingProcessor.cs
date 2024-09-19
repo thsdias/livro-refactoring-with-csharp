@@ -1,19 +1,22 @@
 ﻿namespace Packt.CloudySkiesAir.Chapter6.Flight.Boarding;
 
-public class BoardingProcessor {
+public class BoardingProcessor 
+{
 
   public int CurrentBoardingGroup { get; set; } = 2;
   public BoardingStatus Status { get; set; }
   private int[] _priorityLaneGroups = new[] { 1, 2 };
 
-  public void DisplayBoardingStatus(List<Passenger> passengers, bool? hasBoarded = null) {
+  public void DisplayBoardingStatus(List<Passenger> passengers, bool? hasBoarded = null) 
+  {
     passengers = passengers.Where(p => !hasBoarded.HasValue ||
                                        p.HasBoarded == hasBoarded)
                            .ToList();
 
     DisplayBoardingHeader();
 
-    foreach (Passenger passenger in passengers) {
+    foreach (Passenger passenger in passengers) 
+    {
       string statusMessage = passenger.HasBoarded
         ? "Onboard"
         : BuildMessage(passenger);
@@ -22,16 +25,21 @@ public class BoardingProcessor {
     }
   }
 
-  private void DisplayBoardingHeader() {
-    switch (Status) {
+  private void DisplayBoardingHeader() 
+  {
+    switch (Status) 
+    {
       case BoardingStatus.NotStarted:
         Console.WriteLine("Boarding is closed and the plane has departed.");
         break;
 
       case BoardingStatus.Boarding:
-        if (_priorityLaneGroups.Contains(CurrentBoardingGroup)) {
+        if (_priorityLaneGroups.Contains(CurrentBoardingGroup)) 
+        {
           Console.WriteLine($"Priority Boarding Group {CurrentBoardingGroup}");
-        } else {
+        } 
+        else 
+        {
           Console.WriteLine($"Boarding Group {CurrentBoardingGroup}");
         }
         break;
@@ -48,12 +56,14 @@ public class BoardingProcessor {
     Console.WriteLine();
   }
 
-  public string BuildMessage(Passenger passenger) {
+  public string BuildMessage(Passenger passenger) 
+  {
     bool isMilitary = passenger.IsMilitary;
     bool needsHelp = passenger.NeedsHelp;
     int group = passenger.BoardingGroup;
 
-    return Status switch {
+    return Status switch 
+    {
       BoardingStatus.PlaneDeparted => "Flight Departed",
       BoardingStatus.NotStarted => "Boarding Not Started",
       BoardingStatus.Boarding when isMilitary || needsHelp => "Board Now via Priority Lane",
