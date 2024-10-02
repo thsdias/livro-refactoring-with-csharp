@@ -61,3 +61,6 @@ Software projects start as brand-new greenfield projects, but invariably become 
 
  📚 Chapter 7: Test-Driven Development
  
+    - What is Test-Driven Development?
+    - Test-Driven Development with Visual Studio
+    - When to use Test-Driven Development
