@@ -64,3 +64,6 @@ Software projects start as brand-new greenfield projects, but invariably become 
     - What is Test-Driven Development?
     - Test-Driven Development with Visual Studio
     - When to use Test-Driven Development
+
+ 📚 Chapter 8: Avoiding Code Anti-Patterns with SOLID
+ 
