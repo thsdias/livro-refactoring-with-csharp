@@ -70,4 +70,6 @@ Software projects start as brand-new greenfield projects, but invariably become 
     - Identifying anti-patterns in C# code
     - Writing SOLID code
     - Considering other architectural principles
-    
+
+ 📚 Chapter 9: Advanced Unit Testing
+ 
