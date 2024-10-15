@@ -1,6 +1,7 @@
 ﻿using Packt.CloudySkiesAir.Chapter8;
 
-public class CargoFlightInfo : FlightInfo {
+public class CargoFlightInfo : FlightInfo 
+{
 
   public decimal TonsOfCargo { get; set; }
 

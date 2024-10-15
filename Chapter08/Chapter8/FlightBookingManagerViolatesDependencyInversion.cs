@@ -1,14 +1,18 @@
 ﻿namespace Packt.CloudySkiesAir.Chapter8;
 
-public class FlightBookingManagerViolatesDependencyInversion {
+public class FlightBookingManagerViolatesDependencyInversion 
+{
   private readonly SpecificMailClient _email;
-  public FlightBookingManagerViolatesDependencyInversion(string connectionString) {
+  
+  public FlightBookingManagerViolatesDependencyInversion(string connectionString)
+  {
     _email = new SpecificMailClient(connectionString);
   }
 
-  public bool BookFlight(Passenger passenger,
-    PassengerFlightInfo flight, string seat) {
-    if (!flight.IsSeatAvailable(seat)) {
+  public bool BookFlight(Passenger passenger, PassengerFlightInfo flight, string seat)
+  {
+    if (!flight.IsSeatAvailable(seat))
+    {
       return false;
     }
 

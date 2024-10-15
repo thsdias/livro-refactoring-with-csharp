@@ -2,33 +2,44 @@
 
 namespace Packt.CloudySkiesAir.Chapter8.AntiPatterns;
 
-public class CatchingExceptionAntiPatterns {
-  public void DontCatchException1() {
-    try {
+public class CatchingExceptionAntiPatterns
+{
+  public void DontCatchException1()
+  {
+    try
+    {
       AMethodThatMayThrowExceptions();
     }
-    catch (Exception ex) {
+    catch (Exception ex)
+    {
       // Error handling logic 
     }
   }
 
-  public void DontCatchException2() {
-    try {
+  public void DontCatchException2()
+  {
+    try
+    {
       AMethodThatMayThrowExceptions();
     }
-    catch { // same as catch (Exception ex) above
+    catch
+    { // same as catch (Exception ex) above
       // Error handling logic 
     }
   }
 
-  public void DoCatchSpecificExceptions() {
-    try {
+  public void DoCatchSpecificExceptions()
+  {
+    try
+    {
       AMethodThatMayThrowExceptions();
     }
-    catch (SecurityException ex) {
+    catch (SecurityException ex)
+    {
       // Error handling logic 
     }
-    catch (IOException ex) {
+    catch (IOException ex)
+    {
       // Error handling logic 
     }
   }
@@ -39,8 +50,10 @@ public class CatchingExceptionAntiPatterns {
   /// </summary>
   /// <exception cref="FileNotFoundException">Thrown if a file could not be found</exception>
   /// <exception cref="SecurityException">Thrown if you do not have access to the specific resource</exception>
-  public void AMethodThatMayThrowExceptions() {
-    switch (Random.Shared.Next(3)) {
+  public void AMethodThatMayThrowExceptions()
+  {
+    switch (Random.Shared.Next(3))
+    {
       case 0:
         break;
       case 1:
@@ -50,5 +63,4 @@ public class CatchingExceptionAntiPatterns {
         throw new SecurityException("Ah ah ah; you didn't say the magic word.");
     }
   }
-
 }
