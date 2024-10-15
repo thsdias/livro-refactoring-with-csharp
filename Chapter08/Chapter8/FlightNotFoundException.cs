@@ -1,8 +1,11 @@
 ﻿namespace Packt.CloudySkiesAir.Chapter8;
 
-public class FlightNotFoundException : Exception {
+public class FlightNotFoundException : Exception
+{
   public string FlightId { get; }
-  public FlightNotFoundException(string flightId) {
+  
+  public FlightNotFoundException(string flightId)
+  {
     FlightId = flightId;
   }
 }

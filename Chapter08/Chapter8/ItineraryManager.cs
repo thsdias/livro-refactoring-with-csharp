@@ -1,13 +1,17 @@
 ﻿namespace Packt.CloudySkiesAir.Chapter8;
 
-public class ItineraryManager {
+public class ItineraryManager
+{
   public int MilesAccumulated { get; private set; }
   public FlightInfo? Flight { get; private set; }
 
-  public virtual void FlightCompleted(FlightInfo? nextFlight) {
-    if (Flight != null) {
+  public virtual void FlightCompleted(FlightInfo? nextFlight)
+  {
+    if (Flight != null)
+    {
       AccumulateMiles(Flight.Miles);
     }
+
     Flight = nextFlight;
   }
 
@@ -16,6 +20,5 @@ public class ItineraryManager {
 
   public void AccumulateMiles(int miles) =>
     MilesAccumulated += miles;
-
 }
 

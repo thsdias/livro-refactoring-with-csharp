@@ -67,3 +67,7 @@ Software projects start as brand-new greenfield projects, but invariably become 
 
  📚 Chapter 8: Avoiding Code Anti-Patterns with SOLID
  
+    - Identifying anti-patterns in C# code
+    - Writing SOLID code
+    - Considering other architectural principles
+    
