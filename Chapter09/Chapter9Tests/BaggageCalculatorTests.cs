@@ -3,9 +3,11 @@ using FluentAssertions;
 
 namespace Chapter9Tests;
 
-public class BaggageCalculatorTests {
+public class BaggageCalculatorTests
+{
     [Fact]
-    public void CarryOnBaggageIsPricedCorrectly() {
+    public void CarryOnBaggageIsPricedCorrectly()
+    {
         // Arrange
         BaggageCalculator calculator = new();
         int carryOnBags = 2;
@@ -22,7 +24,8 @@ public class BaggageCalculatorTests {
     }
 
     [Fact]
-    public void FirstCheckedBagShouldCostExpectedAmount() {
+    public void FirstCheckedBagShouldCostExpectedAmount()
+    {
         // Arrange
         BaggageCalculator calculator = new();
         int carryOnBags = 0;
@@ -39,13 +42,13 @@ public class BaggageCalculatorTests {
         result.Should().Be(40);
     }
 
-
     [Theory]
     [InlineData(0, 0, 1, false, 0)]
     [InlineData(2, 3, 2, false, 190)]
     [InlineData(2, 1, 1, false, 100)]
     [InlineData(2, 3, 2, true, 209)]
-    public void BaggageCalculatorCalculatesCorrectPrice(int carryOnBags, int checkedBags, int passengers, bool isHoliday, decimal expected) {
+    public void BaggageCalculatorCalculatesCorrectPrice(int carryOnBags, int checkedBags, int passengers, bool isHoliday, decimal expected)
+    {
         // Arrange
         BaggageCalculator calculator = new();
 
@@ -55,5 +58,4 @@ public class BaggageCalculatorTests {
         // Assert
         result.Should().Be(expected);
     }
-
 }

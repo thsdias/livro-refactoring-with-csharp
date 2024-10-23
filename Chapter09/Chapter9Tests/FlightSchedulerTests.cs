@@ -1,17 +1,17 @@
 ﻿using Bogus;
 using Packt.CloudySkiesAir.Chapter9.Flight.Scheduling;
 using Packt.CloudySkiesAir.Chapter9.Flight.Scheduling.Flights;
-using Shouldly;
 using System.Diagnostics;
 
 namespace Chapter9Tests;
 
-public class FlightSchedulerTests {
-
+public class FlightSchedulerTests 
+{
     private readonly Faker<Airport> _airportFaker;
     private readonly Faker<PassengerFlightInfo> _flightFaker;
 
-    public FlightSchedulerTests() {
+    public FlightSchedulerTests()
+    {
         _airportFaker = new Faker<Airport>()
             .RuleFor(a => a.Country, f => f.Address.Country())
             .RuleFor(a => a.Name, f => f.Address.City())
@@ -34,7 +34,8 @@ public class FlightSchedulerTests {
     }
 
     [Fact]
-    public void ScheduleFlightShouldAddFlight() {
+    public void ScheduleFlightShouldAddFlight()
+    {
         // Arrange
         FlightScheduler scheduler = new();
         PassengerFlightInfo flight = _flightFaker.Generate();
@@ -50,7 +51,8 @@ public class FlightSchedulerTests {
     }
 
     [Fact]
-    public void ScheduleFlightShouldAddFlightNoShouldly() {
+    public void ScheduleFlightShouldAddFlightNoShouldly()
+    {
         // Arrange
         FlightScheduler scheduler = new();
         PassengerFlightInfo flight = _flightFaker.Generate();
@@ -66,7 +68,8 @@ public class FlightSchedulerTests {
     }
 
     [Fact]
-    public void ScheduleFlightShouldNotBeSlow() {
+    public void ScheduleFlightShouldNotBeSlow()
+    {
         // Arrange
         FlightScheduler scheduler = new();
         PassengerFlightInfo flight = _flightFaker.Generate();
@@ -79,9 +82,9 @@ public class FlightSchedulerTests {
         Should.CompleteIn(testAction, maxTime);
     }
 
-
     [Fact]
-    public void ScheduleFlightShouldNotBeSlowStopwatch() {
+    public void ScheduleFlightShouldNotBeSlowStopwatch()
+    {
         // Arrange
         FlightScheduler scheduler = new();
         PassengerFlightInfo flight = _flightFaker.Generate();
@@ -99,7 +102,8 @@ public class FlightSchedulerTests {
     }
 
     [Fact]
-    public void RemoveShouldRemoveFlight() {
+    public void RemoveShouldRemoveFlight()
+    {
         // Arrange
         FlightScheduler scheduler = new();
         PassengerFlightInfo flight = _flightFaker.Generate();
@@ -113,5 +117,4 @@ public class FlightSchedulerTests {
         result.ShouldNotBeNull();
         result.ShouldNotContain(flight);
     }
-
 }

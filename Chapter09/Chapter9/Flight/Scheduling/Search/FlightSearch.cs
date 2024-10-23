@@ -2,7 +2,8 @@
 
 namespace Packt.CloudySkiesAir.Chapter9.Flight.Scheduling.Search;
 
-public class FlightSearch {
+public class FlightSearch
+{
   public Airport? Depart { get; set; }
   public Airport? Arrive { get; set; }
   public DateTime? MinArrive { get; set; }

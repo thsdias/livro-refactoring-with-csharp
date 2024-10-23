@@ -1,11 +1,12 @@
 using Packt.CloudySkiesAir.Chapter9;
-using Shouldly;
 
-namespace Chapter9Tests; 
+namespace Chapter9Tests;
 
-public class MileageTrackerTests {
+public class MileageTrackerTests
+{
     [Fact]
-    public void NewAccountShouldHaveStartingBalance() {
+    public void NewAccountShouldHaveStartingBalance()
+    {
         // Arrange
         int expectedMiles = 100;
 
@@ -17,7 +18,8 @@ public class MileageTrackerTests {
     }
 
     [Fact]
-    public void AddMileageShouldIncreaseBalance() {
+    public void AddMileageShouldIncreaseBalance()
+    {
         // Arrange
         MileageTracker tracker = new();
 
@@ -29,7 +31,8 @@ public class MileageTrackerTests {
     }
 
     [Fact]
-    public void RemoveMileageShouldDecreaseBalance() {
+    public void RemoveMileageShouldDecreaseBalance()
+    {
         // Arrange
         MileageTracker tracker = new();
         tracker.AddMiles(900);
@@ -42,7 +45,8 @@ public class MileageTrackerTests {
     }
 
     [Fact]
-    public void RemoveMileageShouldPreventNegativeBalance() {
+    public void RemoveMileageShouldPreventNegativeBalance()
+    {
         // Arrange
         MileageTracker tracker = new();
         int startingBalance = tracker.Balance;
@@ -57,7 +61,8 @@ public class MileageTrackerTests {
     [Theory]
     [InlineData(900, 250, 750)]
     [InlineData(0, 2500, 100)]
-    public void RemoveMileageShouldResultInCorrectBalance(int addAmount, int redeemAmount, int expectedBalance) {
+    public void RemoveMileageShouldResultInCorrectBalance(int addAmount, int redeemAmount, int expectedBalance)
+    {
         // Arrange
         MileageTracker tracker = new();
         tracker.AddMiles(addAmount);

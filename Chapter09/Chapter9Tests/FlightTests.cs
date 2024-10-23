@@ -1,11 +1,12 @@
 ﻿using Packt.CloudySkiesAir.Chapter9.Flight;
-using Shouldly;
 
-namespace Chapter9Tests; 
+namespace Chapter9Tests;
 
-public class FlightTests {
+public class FlightTests
+{
     [Fact]
-    public void GeneratedMessageShouldBeCorrect() {
+    public void GeneratedMessageShouldBeCorrect()
+    {
         // Arrange
         Flight flight = new();
         string id = "CSA1234";
