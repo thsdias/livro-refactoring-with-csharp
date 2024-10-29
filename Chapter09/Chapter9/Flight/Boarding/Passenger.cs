@@ -1,10 +1,13 @@
 ﻿namespace Packt.CloudySkiesAir.Chapter9.Flight.Boarding;
 
-public class Passenger {
-  public Passenger() {
+public class Passenger
+{
+  public Passenger()
+  {
   }
 
-  public Passenger(string firstName, string lastName) {
+  public Passenger(string firstName, string lastName)
+  {
     FirstName = firstName ?? throw new ArgumentNullException(nameof(firstName));
     LastName = lastName ?? throw new ArgumentNullException(nameof(lastName));
   }

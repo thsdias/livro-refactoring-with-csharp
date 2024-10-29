@@ -72,4 +72,9 @@ Software projects start as brand-new greenfield projects, but invariably become 
     - Considering other architectural principles
 
  📚 Chapter 9: Advanced Unit Testing
- 
+  
+    - Creating readable tests with Shouldly
+    - Generating test data with Bogus
+    - Mocking dependencies with Moq and NSubstitute
+    - Pinning tests with Snapper
+    - Experimenting with Scientist .NET

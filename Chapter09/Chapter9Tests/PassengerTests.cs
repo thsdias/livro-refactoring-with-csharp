@@ -1,21 +1,16 @@
 ﻿using Bogus;
-using Moq;
 using Packt.CloudySkiesAir.Chapter9.Flight.Boarding;
-using Shouldly;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Chapter9Tests; 
+namespace Chapter9Tests;
 
-public class PassengerTests {
-
+public class PassengerTests 
+{
     [Fact]
-    public void PassengerFullNameShouldBeAccurate() {
+    public void PassengerFullNameShouldBeAccurate()
+    {
         // Arrange
-        Passenger passenger = new() {
+        Passenger passenger = new()
+        {
             FirstName = "Dot",
             LastName = "Nette",
         };
@@ -28,9 +23,11 @@ public class PassengerTests {
     }
 
     [Fact]
-    public void BoardingMessageShouldBeAccurate() {
+    public void BoardingMessageShouldBeAccurate()
+    {
         // Arrange
-        Passenger passenger = new() {
+        Passenger passenger = new()
+        {
             BoardingGroup = 7,
             FirstName = "Dot",
             LastName = "Nette",
@@ -44,6 +41,7 @@ public class PassengerTests {
             IsMilitary = false,
             NeedsHelp = false,
         };
+
         BoardingProcessor boarding = new(BoardingStatus.Boarding, group:3);
 
         // Act
@@ -54,7 +52,8 @@ public class PassengerTests {
     }
 
     [Fact]
-    public void BoardingMessageShouldBeAccurateWithBogus() {
+    public void BoardingMessageShouldBeAccurateWithBogus()
+    {
         Faker<Passenger> faker = BuildPersonFaker();
 
         Passenger passenger = faker.Generate();
@@ -71,7 +70,8 @@ public class PassengerTests {
         message.ShouldBe("Please Wait");
     }
 
-    private static Faker<Passenger> BuildPersonFaker() {
+    private static Faker<Passenger> BuildPersonFaker()
+    {
         // Arrange
         Faker<Passenger> faker = new();
         faker.RuleFor(p => p.FirstName, f => f.Person.FirstName)

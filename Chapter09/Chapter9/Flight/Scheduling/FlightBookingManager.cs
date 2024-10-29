@@ -2,15 +2,19 @@
 
 namespace Packt.CloudySkiesAir.Chapter9.Flight.Scheduling;
 
-public class FlightBookingManager {
+public class FlightBookingManager
+{
   private readonly IEmailClient _email;
-  public FlightBookingManager(IEmailClient email) {
+
+  public FlightBookingManager(IEmailClient email)
+  {
     _email = email;
   }
 
-  public bool BookFlight(Passenger passenger,
-    FlightInfo flight, string seat) {
-    if (!flight.IsSeatAvailable(seat)) {
+  public bool BookFlight(Passenger passenger, FlightInfo flight, string seat)
+  {
+    if (!flight.IsSeatAvailable(seat))
+    {
       return false;
     }
 

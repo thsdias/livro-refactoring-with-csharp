@@ -9,10 +9,11 @@ using Snapper.Attributes;
 
 namespace Chapter9Tests;
 
-public class FlightBookingManagerTests {
-
+public class FlightBookingManagerTests
+{
     [Fact]
-    public void BookingFlightShouldSucceedForEmptyFlightTestDouble() {
+    public void BookingFlightShouldSucceedForEmptyFlightTestDouble()
+    {
         // Arrange
         TestEmailClient emailClient = new();
         FlightBookingManager manager = new(emailClient);
@@ -27,7 +28,8 @@ public class FlightBookingManagerTests {
     }
 
     [Fact]
-    public void BookingFlightShouldSucceedForEmptyFlight() {
+    public void BookingFlightShouldSucceedForEmptyFlight()
+    {
         // Arrange
         Mock<IEmailClient> clientMock = new();
         IEmailClient emailClient = clientMock.Object;
@@ -42,9 +44,9 @@ public class FlightBookingManagerTests {
         booked.ShouldBeTrue();
     }
 
-
     [Fact]
-    public void BookingFlightShouldSendEmails() {
+    public void BookingFlightShouldSendEmails()
+    {
         // Arrange
         Mock<IEmailClient> mockClient = new();
         mockClient.Setup(c => c.SendMessage(It.IsAny<string>(), It.IsAny<string>())).Returns(true);
@@ -63,9 +65,9 @@ public class FlightBookingManagerTests {
         mockClient.VerifyNoOtherCalls();
     }
 
-
     [Fact]
-    public void BookingFlightShouldSendEmailsNSubstitute() {
+    public void BookingFlightShouldSendEmailsNSubstitute()
+    {
         // Arrange
         IEmailClient emailClient = Substitute.For<IEmailClient>();
         emailClient.SendMessage(Arg.Any<string>(), Arg.Any<string>()).Returns(true);
@@ -82,8 +84,10 @@ public class FlightBookingManagerTests {
         emailClient.Received().SendMessage(passenger.Email, Arg.Any<string>());
     }
 
-    private static Passenger GenerateTestPassenger() {
-        return new() {
+    private static Passenger GenerateTestPassenger()
+    {
+        return new()
+        {
             FirstName = "Dot",
             LastName = "Nette",
             Email = "noreply@packt.com"
@@ -91,8 +95,9 @@ public class FlightBookingManagerTests {
     }
 
     [Fact]
-    [UpdateSnapshots]
-    public void FlightManifestShouldMatchExpectations() {
+    //[UpdateSnapshots]
+    public void FlightManifestShouldMatchExpectations()
+    {
         // Arrange
         FlightInfo flight = GenerateEmptyFlight("Alta", "Laos");
         Passenger p1 = new("Dot", "Netta");
@@ -109,7 +114,8 @@ public class FlightBookingManagerTests {
     }
 
     [Fact]
-    public void FlightManifestExperimentWithScientist() {
+    public void FlightManifestExperimentWithScientist()
+    {
         FlightInfo flight = GenerateEmptyFlight("Buenos Ares", "Laos");
         Passenger p1 = new("Dot", "Netta");
         Passenger p2 = new("See", "Sharp");
@@ -119,20 +125,24 @@ public class FlightBookingManagerTests {
                 LegacyManifestGenerator generator = new();
                 return generator.Build(flight);
             });
+
             exp.Try(() => {
                 RewrittenManifestGenerator generator = new();
                 return generator.Build(flight);
             });
+
             exp.Compare((a, b) => a.Arrival == b.Arrival &&
                                   a.Departure == b.Departure &&
                                   a.PassengerCount == b.PassengerCount);
+            
             exp.ThrowOnMismatches = true;
         });
     }
 
-
-    private static FlightInfo GenerateEmptyFlight(string from, string to) {
-        return new() {
+    private static FlightInfo GenerateEmptyFlight(string from, string to)
+    {
+        return new()
+        {
             Departure = new Airport() { Name = from },
             Arrival = new Airport() { Name = to },
         };
