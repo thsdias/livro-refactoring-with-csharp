@@ -78,3 +78,6 @@ Software projects start as brand-new greenfield projects, but invariably become 
     - Mocking dependencies with Moq and NSubstitute
     - Pinning tests with Snapper
     - Experimenting with Scientist .NET
+
+ 📚 Chapter 10: Defensive Coding Techniques
+      
