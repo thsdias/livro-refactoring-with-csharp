@@ -80,4 +80,8 @@ Software projects start as brand-new greenfield projects, but invariably become 
     - Experimenting with Scientist .NET
 
  📚 Chapter 10: Defensive Coding Techniques
-      
+  
+    - Validating inputs
+    - Protecting against null
+    - Moving beyond classes
+    - Advanced type usage

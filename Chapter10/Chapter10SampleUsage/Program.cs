@@ -4,8 +4,11 @@ LoggingDictionary<string, BoardingPass> passDict = new();
 LoggingDictionary<string, FlightInfo> flightDict = new();
 
 List<BoardingPass> passes = PassGenerator.Generate();
-foreach (BoardingPass pass in passes) {
-    string message = pass switch { 
+
+foreach (BoardingPass pass in passes)
+{
+    string message = pass switch
+    { 
         {
             Flight.Status: FlightStatus.Pending,
             Group: 1 or 2 or 3
@@ -15,6 +18,7 @@ foreach (BoardingPass pass in passes) {
             => $"{pass.Passenger} flight missed",
         _ => $"{pass.Passenger} please wait",
     };
+
     Console.WriteLine(message);
 }
 
@@ -25,7 +29,8 @@ IEnumerable<FlightInfo> flights = cloudySkies.GetFlightsByStatus(null, apiKey)
   .OrderBy(f => f.DepartureTime)
   .ThenBy(f => f.ArrivalTime);
 
-foreach (FlightInfo flight in flights) {
+foreach (FlightInfo flight in flights)
+{
     Console.WriteLine(flight);
 }
 
@@ -33,20 +38,17 @@ Console.WriteLine("Enter a flight #: ");
 string id = Console.ReadLine()!;
 
 FlightInfo? myFlight = cloudySkies.GetFlight(id, apiKey);
-if (myFlight != null) {
+
+if (myFlight != null)
     Console.WriteLine($"Found flight {id}");
-} else {
+else
     Console.WriteLine($"Could not find flight {id}");
-}
 
 Console.WriteLine("Enter a mileage amount: ");
 string milesStr = Console.ReadLine()!;
 int miles = int.Parse(milesStr);
 
 flights = cloudySkies.GetFlightsByMiles(miles, apiKey);
-foreach (FlightInfo flight in flights) {
+
+foreach (FlightInfo flight in flights)
     Console.WriteLine(flight);
-}
-
-
-
