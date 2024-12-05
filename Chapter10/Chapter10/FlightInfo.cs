@@ -1,6 +1,7 @@
 ﻿namespace Packt.CloudySkiesAir.Chapter10;
 
-public class FlightInfo {
+public class FlightInfo
+{
     public string Id { get; set; }
     public FlightStatus Status { get; set; }
     public string Origin { get; set; }

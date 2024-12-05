@@ -2,13 +2,17 @@
 
 namespace Packt.CloudySkiesAir.Chapter10;
 
-public static class PassGenerator {
-  public static List<BoardingPass> Generate() {
+public static class PassGenerator
+{
+  public static List<BoardingPass> Generate()
+  {
     Faker faker = new();
     List<BoardingPass> passes = new();
 
-    for (int i = 0; i < 15; i++) {
-      BoardingPass pass = new(faker.Name.FullName()) {
+    for (int i = 0; i < 15; i++)
+    {
+      BoardingPass pass = new(faker.Name.FullName())
+      {
         Flight = GenerateFlight(faker),
         Seat = faker.Random.Int(1, 60) + faker.Random.String2(2, "ABCDEF"),
         Group = faker.Random.Number(1, 8)
@@ -21,7 +25,8 @@ public static class PassGenerator {
   }
 
   private static FlightInfo GenerateFlight(Faker faker) 
-    => new FlightInfo() {
+    => new FlightInfo() 
+    {
       ArrivalTime = faker.Date.Future(),
       DepartureTime = faker.Date.Soon(),
       Destination = faker.Address.City(),
