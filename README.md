@@ -85,3 +85,5 @@ Software projects start as brand-new greenfield projects, but invariably become 
     - Protecting against null
     - Moving beyond classes
     - Advanced type usage
+
+ 📚 Chapter 11: AI-Assisted Refactoring with GitHub Copilot
