@@ -87,3 +87,10 @@ Software projects start as brand-new greenfield projects, but invariably become 
     - Advanced type usage
 
  📚 Chapter 11: AI-Assisted Refactoring with GitHub Copilot
+   
+    - Apresentando o GitHub Copilot
+    - Introdução ao GitHub Copilot no Visual Studio
+    - Refatoração com GitHub Copilot Chat
+    - Elaboração de documentação com GitHub Copilot Chat
+    - Gerando ideias de teste com o GitHub Copilot Chat
+    - Compreendendo os limites do GitHub Copilot

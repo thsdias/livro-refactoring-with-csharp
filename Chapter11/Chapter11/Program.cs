@@ -1,7 +1,9 @@
 ﻿namespace Packt.CloudySkiesAir.Chapter11;
 
-public class Program {
-  public static void Main() {
+public class Program
+{
+  public static void Main()
+  {
 
   }
 }
