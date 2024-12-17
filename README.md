@@ -94,3 +94,5 @@ Software projects start as brand-new greenfield projects, but invariably become 
     - Elaboração de documentação com GitHub Copilot Chat
     - Gerando ideias de teste com o GitHub Copilot Chat
     - Compreendendo os limites do GitHub Copilot
+
+ 📚 Chapter 12: Code Analysis in Visual Studio
