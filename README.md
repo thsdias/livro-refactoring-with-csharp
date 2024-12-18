@@ -96,3 +96,7 @@ Software projects start as brand-new greenfield projects, but invariably become 
     - Compreendendo os limites do GitHub Copilot
 
  📚 Chapter 12: Code Analysis in Visual Studio
+   
+    - Calculating code metrics in Visual Studio
+    - Performing code analysis in Visual Studio
+    - Exploring advanced code analysis tools
