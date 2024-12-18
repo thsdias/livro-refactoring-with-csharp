@@ -2,7 +2,8 @@
 
 namespace Packt.CloudySkiesAir.Chapter12.Flight.Scheduling;
 
-public interface IFlightInfo {
+public interface IFlightInfo
+{
   string Id { get; }
   AirportEvent Arrival { get; }
   AirportEvent Departure { get; }

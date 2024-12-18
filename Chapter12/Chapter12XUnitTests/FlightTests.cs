@@ -2,9 +2,11 @@
 
 namespace Chapter12UnitTests;
 
-public class FlightTests {
+public class FlightTests
+{
     [Fact]
-    public void GeneratedMessageShouldBeCorrect() {
+    public void GeneratedMessageShouldBeCorrect()
+    {
         // Arrange
         Flight flight = new();
         string id = "CSA1234";

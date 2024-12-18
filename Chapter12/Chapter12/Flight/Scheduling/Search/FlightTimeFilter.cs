@@ -2,12 +2,14 @@
 
 namespace Packt.CloudySkiesAir.Chapter12.Flight.Scheduling.Search;
 
-public class FlightTimeFilter : FlightFilterBase {
+public class FlightTimeFilter : FlightFilterBase
+{
   public DateTime? MinTime { get; set; }
   public DateTime? MaxTime { get; set; }
   public bool IsDeparture { get; set; }
 
-  public override bool ShouldInclude(IFlightInfo flight) {
+  public override bool ShouldInclude(IFlightInfo flight)
+  {
     DateTime time = IsDeparture
       ? flight.Departure.Time
       : flight.Arrival.Time;

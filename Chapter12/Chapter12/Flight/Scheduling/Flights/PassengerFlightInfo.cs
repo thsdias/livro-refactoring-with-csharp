@@ -1,8 +1,10 @@
 ﻿namespace Packt.CloudySkiesAir.Chapter12.Flight.Scheduling.Flights;
 
-public class PassengerFlightInfo : FlightInfoBase {
+public class PassengerFlightInfo : FlightInfoBase
+{
   private int _passengers;
-  public int Passengers {
+  public int Passengers
+  {
     get => _passengers;
     private set => _passengers = value;
   }

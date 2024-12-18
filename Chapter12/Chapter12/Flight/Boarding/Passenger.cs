@@ -1,6 +1,7 @@
 ﻿namespace Packt.CloudySkiesAir.Chapter12.Flight.Boarding;
 
-public class Passenger {
+public class Passenger
+{
   public required string FirstName { get; set; }
   public required string LastName { get; set; }
   public int BoardingGroup { get; set; }
