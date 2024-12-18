@@ -3,12 +3,13 @@ using Packt.CloudySkiesAir.Chapter12.Flight.Scheduling.Flights;
 
 namespace Chapter12UnitTests;
 
-public class FlightSchedulerTests {
-
+public class FlightSchedulerTests
+{
     private readonly Airport _airport1;
     private readonly Airport _airport2;
 
-    public FlightSchedulerTests() {
+    public FlightSchedulerTests()
+    {
         _airport1 = new() {
             Code = "DNA",
             Country = "United States",
@@ -22,7 +23,8 @@ public class FlightSchedulerTests {
     }
 
     [Fact]
-    public void ScheduleFlightShouldAddFlight() {
+    public void ScheduleFlightShouldAddFlight()
+    {
         // Arrange
         FlightScheduler scheduler = new();
         PassengerFlightInfo flight = CreateFlight("CS2024");
@@ -49,7 +51,8 @@ public class FlightSchedulerTests {
       };
 
     [Fact]
-    public void RemoveShouldRemoveFlight() {
+    public void RemoveShouldRemoveFlight()
+    {
         // Arrange
         FlightScheduler scheduler = new();
         PassengerFlightInfo flight = CreateFlight("CS2024");

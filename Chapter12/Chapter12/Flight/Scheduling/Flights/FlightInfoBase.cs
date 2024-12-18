@@ -2,7 +2,8 @@
 
 namespace Packt.CloudySkiesAir.Chapter12.Flight.Scheduling.Flights;
 
-public abstract class FlightInfoBase : IFlightInfo {
+public abstract class FlightInfoBase : IFlightInfo
+{
   public required AirportEvent Arrival { get; init; }
   public required AirportEvent Departure { get; init; }
   public TimeSpan Duration => Departure.Time - Arrival.Time;
