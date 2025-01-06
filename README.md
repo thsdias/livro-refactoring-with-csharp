@@ -100,3 +100,10 @@ Software projects start as brand-new greenfield projects, but invariably become 
     - Calculating code metrics in Visual Studio
     - Performing code analysis in Visual Studio
     - Exploring advanced code analysis tools
+
+ 📚 Chapter 13: Creating a Roslyn Analyzer
+   
+    - Understanding Roslyn Analyzers
+    - Creating a Roslyn Analyzer
+    - Testing Roslyn Analyzers with RoslynTestKit
+    - Sharing analyzers as Visual Studio extensions
