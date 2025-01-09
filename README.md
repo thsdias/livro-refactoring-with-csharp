@@ -107,3 +107,9 @@ Software projects start as brand-new greenfield projects, but invariably become 
     - Creating a Roslyn Analyzer
     - Testing Roslyn Analyzers with RoslynTestKit
     - Sharing analyzers as Visual Studio extensions
+
+ 📚 Chapter 14: Refactoring Code with Roslyn Analyzers
+   
+    - Building a Roslyn Analyzer code fix
+    - Testing code fixes with RoslynTestKit
+    - Publishing Roslyn analyzers as NuGet packages
