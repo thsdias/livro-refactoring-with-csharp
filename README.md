@@ -113,3 +113,10 @@ Software projects start as brand-new greenfield projects, but invariably become 
     - Building a Roslyn Analyzer code fix
     - Testing code fixes with RoslynTestKit
     - Publishing Roslyn analyzers as NuGet packages
+
+ 📚 Chapter 15: Communicating Technical Debt
+   
+    - Overcoming barriers to refactoring
+	- Communicating technical debt
+	- Prioritizing technical debt
+	- Getting organizational buy-in
