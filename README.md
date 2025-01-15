@@ -120,3 +120,10 @@ Software projects start as brand-new greenfield projects, but invariably become 
 	- Communicating technical debt
 	- Prioritizing technical debt
 	- Getting organizational buy-in
+
+ 📚 Chapter 16: Adopting Code Standards
+   
+    - Understanding code standards
+	- Establishing code standards
+	- Formatting and code cleanup in Visual Studio
+	- Applying code standards with EditorConfig
