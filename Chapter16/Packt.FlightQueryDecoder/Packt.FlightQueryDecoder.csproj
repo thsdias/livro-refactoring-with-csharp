@@ -7,4 +7,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\SourceControl\GitHub\livro-refactoring-with-csharp\Chapter16\Packt.FlightQueryDecoder\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="D:\SourceControl\GitHub\livro-refactoring-with-csharp\Chapter16\Packt.FlightQueryDecoder\.editorconfig" />
+  </ItemGroup>
+
 </Project>
