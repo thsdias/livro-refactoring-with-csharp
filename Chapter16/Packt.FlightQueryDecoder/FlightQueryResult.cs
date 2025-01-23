@@ -1,5 +1,7 @@
-﻿namespace Packt.FlightQueryDecoder {
-    public class FlightQueryResult {
+﻿namespace Packt.FlightQueryDecoder
+{
+    public class FlightQueryResult
+    {
         public string Origin { get; set; }
         public string Destination { get; set; }
         public string AircraftTypeDesignator { get; internal set; }

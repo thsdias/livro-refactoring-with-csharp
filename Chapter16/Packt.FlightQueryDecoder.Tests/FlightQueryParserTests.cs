@@ -1,10 +1,12 @@
 using Shouldly;
 
-namespace Packt.FlightQueryDecoder.Tests {
-    public class FlightQueryParserTests {
-
+namespace Packt.FlightQueryDecoder.Tests
+{
+    public class FlightQueryParserTests
+    {
         [Fact]
-        public void FlightQueryParserShouldParseFlightQueries() {
+        public void FlightQueryParserShouldParseFlightQueries()
+        {
             // Arrange
             FlightQueryParser parser = new();
             string query = "AD08FEBDENLHR";
@@ -20,7 +22,8 @@ namespace Packt.FlightQueryDecoder.Tests {
         }
 
         [Fact]
-        public void FlightQueryParserShouldParseFlightQueryResults() {
+        public void FlightQueryParserShouldParseFlightQueryResults()
+        {
             // Arrange
             FlightQueryParser parser = new();
             string query = "DEN LHR 05:50P 09:40A E0/789 8:50";
