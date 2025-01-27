@@ -127,3 +127,11 @@ Software projects start as brand-new greenfield projects, but invariably become 
 	- Establishing code standards
 	- Formatting and code cleanup in Visual Studio
 	- Applying code standards with EditorConfig
+
+ 📚 Chapter 17: Agile Refactoring
+   
+    - Refactoring in an agile environment
+    - Succeeding with agile refactoring strategies
+    - Accomplishing large-scale refactorings
+    - Recovering when refactoring goes wrong
+    - Deploying large-scale refactorings
